@@ -17,19 +17,14 @@ const LoginAdmin = () => {
                     <h2 className="text-center text-2xl mb-8 text-shadow font-bold">Login</h2>
                     <form id="loginForm" className="space-y-6">
                     <div className="input-group flex items-center border-b border-gray-300 pb-2">
-                            <i className="fas fa-envelope text-gray-400 mr-3"></i>
-                            <input
-                                type="text"
-                                id="username"
-                                placeholder="Username"
-                                required
-                                className="w-full p-2 focus:outline-none text-gray-700"/>
-                        </div>
+                        <i className="fas fa-envelope text-gray-400 mr-3"></i>
+                        <input type="text" id="username" placeholder="Username" required className="w-full p-2 border-none focus:outline-none focus:ring-0 text-gray-700" />
+                    </div>
 
-                        <div className="input-group flex items-center border-b border-gray-300 pb-2">
-                            <i className="fas fa-lock text-gray-400 mr-3"></i>
-                            <input type="password" id="password" placeholder="Password" required className="w-full p-2 focus:outline-none text-gray-700" />
-                        </div>
+                    <div className="input-group flex items-center border-b border-gray-300 pb-2">
+                        <i className="fas fa-lock text-gray-400 mr-3"></i>
+                        <input type="password" id="password" placeholder="Password" required className="w-full p-2 border-none focus:outline-none focus:ring-0 text-gray-700" /> 
+                    </div>
 
                         <button type="submit" className="btn w-full bg-blue-500 text-white py-4 rounded hover:bg-blue-600">Login</button>
                     </form>
