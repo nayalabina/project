@@ -22,9 +22,7 @@ const Registration = () => {
                 </form>
             </div>
         </div>
-        <div className="footer absolute bottom-2 w-full text-center text-gray-700 text-sm">
-            CBTExam©2024
-        </div>
+        <div className="footer absolute bottom-2 w-full text-center text-gray-700 text-sm">CBTExam©2024</div>
     </div>
     );
 };

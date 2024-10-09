@@ -49,13 +49,13 @@ const Soal = () => {
 
     return (
         <div className="h-screen bg-white text-gray-900 flex">
-            <nav className={`flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'w-64' : 'w-16'} bg-blue-400 rounded-r-2xl`}>
+            <nav className={`fixed top-0 left-0 h-full flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'w-64' : 'w-16'} bg-blue-400 rounded-r-2xl`}>
                 <button className="w-full py-3 px-4 flex items-center justify-between hover:bg-blue-300 transition-colors duration-200" onClick={toggleSidebar}>
                     <div className="flex items-center">
                         <Menu className="w-6 h-6 mr-3 text-white"/>
                         {isOpen && <span className="text-lg font-medium text-white">Menu</span>}
                     </div>
-                    {isOpen && <ChevronLeft className="w-5 h-5 text-white"/>}
+                    {isOpen && <ChevronLeft className="w-5 h-5 text-white" />}
                 </button>
 
                 <Link to="/soal" className="w-full py-3 px-4 flex items-center hover:bg-blue-300 transition-colors duration-200">
@@ -71,7 +71,8 @@ const Soal = () => {
                 </div>
             </nav>
 
-            <div className="bg-white flex-grow p-10">
+            {/* Konten utama */}
+            <div className={`flex-grow p-10 transition-all duration-300 ${isOpen ? 'ml-64' : 'ml-16'}`}>
                 <h2 className="text-3xl mb-6">Soal Ujian</h2>
                 <div className="absolute top-7 right-12 mt-6">
                     <i className="fas fa-user shadow-lg text-2xl"></i>

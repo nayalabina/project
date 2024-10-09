@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { Menu, LogOut, FileText, ChevronLeft } from 'lucide-react';
+import { Menu, ChevronLeft, FileText, LogOut } from 'lucide-react';
 
 export function Dashboard() {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,8 +10,8 @@ export function Dashboard() {
   };
 
   return (
-    <div className={`h-screen bg-white text-gray-900 flex`}>
-      <nav className={`flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'w-64' : 'w-16'} bg-blue-400 rounded-r-2xl`}>
+    <div className="h-screen bg-white text-gray-900 flex">
+      <nav className={`fixed top-0 left-0 h-full flex flex-col transition-all duration-300 ease-in-out ${isOpen ? 'w-64' : 'w-16'} bg-blue-400 rounded-r-2xl`}>
         <button className="w-full py-3 px-4 flex items-center justify-between hover:bg-blue-300 transition-colors duration-200" onClick={toggleSidebar}>
           <div className="flex items-center">
             <Menu className="w-6 h-6 mr-3 text-white"/>
@@ -62,7 +61,7 @@ export function Dashboard() {
             <div className="input-group flex flex-col mb-5 w-full">
               <label className="text-sm mb-2">Tanggal Lahir</label>
               <input type="date" placeholder="Tanggal Lahir" className="border border-gray-300 rounded-full py-2 px-4 text-base shadow-md w-full"/>
-            </div>
+            </div> 
             
             <button type="submit" className="submit-btn bg-black text-white py-2 px-8 rounded-full cursor-pointer text-base mt-8 self-end hover:bg-gray-800">Selesai</button>
           </form>
