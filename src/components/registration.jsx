@@ -8,7 +8,7 @@ const Registration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post('http://localhost:8000/api/registration', {kodeUjian}); //ganti kode link jika berbeda
+            const response = await axios.post('http://localhost:8000/api/registration', {kodeUjian}); //ganti kode url jika berbeda
             console.log('Registrasi Berhasil!', response.data);
         } catch (error){
             console.error('Kode tidak aktif!', error);

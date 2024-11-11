@@ -71,7 +71,7 @@ const QuestionComponent = () => {
   const NumberGrid = () => (
     <div className="absolute top-full right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-xl p-4 z-10 w-80 transition-all duration-300 ease-in-out">
       <div className="grid grid-cols-5 gap-2">
-        {[...Array(20)].map((_, index) => (
+        {[...Array(10)].map((_, index) => (
           <button key={index} className="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-md text-lg font-semibold hover:bg-blue-100 transition-colors duration-200"
             onClick={() => handleNumberSelection(index + 1)}> {index + 1}
           </button>
@@ -119,8 +119,8 @@ const QuestionComponent = () => {
         {selectedNumber > 1 && (
           <button className="px-4 py-2 bg-blue-400 text-white rounded-md" onClick={handlePrevious}>Kembali</button>
         )}
-        <div className="flex justify-end w-full">
-          {selectedNumber < 20 ? (
+        <div className="flex justify-end w-full"> 
+          {selectedNumber < 10 ? (
             <button className="px-4 py-2 bg-blue-400 text-white rounded-md" onClick={handleNext}>Lanjut</button>
           ) : (
             <button className="px-4 py-2 bg-red-500 text-white rounded-md" onClick={() => setShowNotification(true)}>Selesai</button>
